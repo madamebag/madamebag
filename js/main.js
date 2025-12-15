@@ -30,10 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", function() {
   const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('navLinks');
+  const navMobile = document.getElementById('navMobile');
 
   menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
+    navMobile.classList.toggle('show');
   });
 });
 
