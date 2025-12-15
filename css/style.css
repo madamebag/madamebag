@@ -257,6 +257,64 @@ footer { background: var(--dark); color: var(--white); text-align:center; paddin
   object-fit: contain;
 
 }
+/* Menu desktop sempre visível */
+.nav-desktop {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Menu mobile escondido */
+.nav-mobile {
+  display: none;
+}
+
+.menu-toggle {
+  display: none; /* só aparece no mobile */
+  font-size: 28px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* Mobile */
+@media(max-width: 768px) {
+  .nav-desktop {
+    display: none; /* esconde menu desktop */
+  }
+
+  .menu-toggle {
+    display: block; /* mostra hambúrguer */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .nav-mobile {
+    display: none; /* inicialmente escondido */
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(0,0,0,0.9);
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .nav-mobile a {
+    margin: 10px 0;
+    background: var(--gold);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .nav-mobile.show {
+    display: flex;
+  }
+}
+
 
 
 
