@@ -258,4 +258,59 @@ footer { background: var(--dark); color: var(--white); text-align:center; paddin
 
 }
 
+/* Esconder menu mobile no desktop */
+.nav-mobile {
+  display: none;
+}
+
+.menu-toggle {
+  display: none; /* só aparece no mobile */
+}
+
+/* Menu desktop padrão */
+.nav-desktop {
+  display: flex;
+  gap: 15px;
+}
+
+/* Mobile */
+@media(max-width: 768px) {
+  /* Esconder menu desktop no mobile */
+  .nav-desktop {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    color: var(--white);
+    cursor: pointer;
+  }
+
+  .nav-mobile {
+    display: none; /* inicialmente escondido */
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(0,0,0,0.9);
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .nav-mobile a {
+    margin: 10px 0;
+    background: var(--gold);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .nav-mobile.show {
+    display: flex;
+  }
+}
+
 
