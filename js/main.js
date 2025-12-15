@@ -28,13 +28,4 @@ document.addEventListener("DOMContentLoaded", () => {
   close.onclick = () => popup.classList.remove("active");
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  const menuToggle = document.getElementById('menuToggle');
-  const navMobile = document.getElementById('navMobile');
-
-  menuToggle.addEventListener('click', () => {
-    navMobile.classList.toggle('show');
-  });
-});
-
 
