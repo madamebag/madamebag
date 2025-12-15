@@ -1,10 +1,10 @@
 function comprar(produto, preco) {
   const telefone = "5599999999999"; // TROCAR
   const mensagem = `
-Olá! Gostaria de comprar:
+OlÃ¡! Gostaria de comprar:
 
-👜 Produto: ${produto}
-💰 Preço: R$ ${preco.toFixed(2)}
+ðŸ‘œ Produto: ${produto}
+ðŸ’° PreÃ§o: R$ ${preco.toFixed(2)}
 
 Pode me passar as formas de pagamento?
   `;
@@ -21,10 +21,20 @@ document.addEventListener("DOMContentLoaded", () => {
   // Abre automaticamente depois de 1.2s
   setTimeout(() => popup.classList.add("active"), 1200);
 
-  // Alternar popup ao clicar no bot�o
+  // Alternar popup ao clicar no botão
   btn.onclick = () => popup.classList.toggle("active");
 
   // Fechar popup
   close.onclick = () => popup.classList.remove("active");
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+});
+
 
