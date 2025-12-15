@@ -258,5 +258,53 @@ footer { background: var(--dark); color: var(--white); text-align:center; paddin
 
 }
 
+/* Esconder menu mobile por padrão */
+.nav-mobile { 
+  display: none; 
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: rgba(28,28,28,0.95);
+  border-radius: 10px;
+  padding: 15px;
+  gap: 10px;
+  z-index: 999;
+}
+
+.nav-mobile a {
+  padding: 10px;
+  border-radius: 25px;
+  background: var(--gold);
+  color: var(--dark);
+  text-align: center;
+}
+
+/* Botão hambúrguer */
+.menu-toggle { 
+  display: none; 
+  font-size: 28px; 
+  color: var(--gold); 
+  cursor: pointer; 
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+/* Desktop: mostrar nav-desktop */
+.nav-desktop { display: flex; }
+
+/* Mobile */
+@media(max-width: 768px){
+  .nav-desktop { display: none; } /* esconde desktop */
+  .menu-toggle { display: block; } /* mostra hamburger */
+}
+
+/* Classe para mostrar menu mobile */
+.nav-mobile.show {
+  display: flex;
+}
+
+
 
 
