@@ -1,34 +1,21 @@
+// WhatsApp
 function comprar(produto, preco) {
-  const telefone = "5599999999999"; // TROCAR
-  const mensagem = `
-OlÃ¡! Gostaria de comprar:
-
-ðŸ‘œ Produto: ${produto}
-ðŸ’° PreÃ§o: R$ ${preco.toFixed(2)}
-
-Pode me passar as formas de pagamento?
-  `;
-  window.open(
-    `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`,
-    "_blank"
-  );
+  const telefone = "5599999999999";
+  const mensagem = `Olá! Gostaria de comprar:\nProduto: ${produto}\nPreço: R$ ${preco.toFixed(2)}`;
+  window.open(`https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`, "_blank");
 }
+
+// Popup WhatsApp
 document.addEventListener("DOMContentLoaded", () => {
   const popup = document.getElementById("whatsappPopup");
   const btn = document.getElementById("whatsappButton");
   const close = document.getElementById("closePopup");
 
-  // Abre automaticamente depois de 1.2s
   setTimeout(() => popup.classList.add("active"), 1200);
-
-  // Alternar popup ao clicar no botão
   btn.onclick = () => popup.classList.toggle("active");
-
-  // Fechar popup
   close.onclick = () => popup.classList.remove("active");
-});
 
-document.addEventListener('DOMContentLoaded', () => {
+  // Hamburger
   const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('navMenu');
 
@@ -36,7 +23,3 @@ document.addEventListener('DOMContentLoaded', () => {
     navMenu.classList.toggle('active');
   });
 });
-
-
-
-
