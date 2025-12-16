@@ -258,53 +258,63 @@ footer { background: var(--dark); color: var(--white); text-align:center; paddin
 
 }
 
-/* Esconder menu mobile por padrão */
-.nav-mobile { 
-  display: none; 
-  flex-direction: column;
+/* Esconde o menu mobile inicialmente */
+.mobile-menu {
+  display: none;
   position: absolute;
-  top: 70px;
+  top: 70px; /* abaixo do header */
   right: 20px;
-  background: rgba(28,28,28,0.95);
-  border-radius: 10px;
+  background: var(--dark);
+  border-radius: 8px;
   padding: 15px;
-  gap: 10px;
-  z-index: 999;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-.nav-mobile a {
-  padding: 10px;
-  border-radius: 25px;
+/* Estilo dos links do menu mobile */
+.mobile-menu .nav-btn {
+  display: block;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.mobile-menu .nav-btn:hover {
   background: var(--gold);
   color: var(--dark);
-  text-align: center;
 }
 
-/* Botão hambúrguer */
-.menu-toggle { 
-  display: none; 
-  font-size: 28px; 
-  color: var(--gold); 
-  cursor: pointer; 
-  position: absolute;
-  top: 25px;
-  right: 25px;
+/* Botão hamburger hidden no desktop */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--gold);
+  font-size: 28px;
+  cursor: pointer;
 }
 
-/* Desktop: mostrar nav-desktop */
-.nav-desktop { display: flex; }
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-left, .nav-right {
+    display: none; /* Esconde menu desktop */
+  }
 
-/* Mobile */
-@media(max-width: 768px){
-  .nav-desktop { display: none; } /* esconde desktop */
-  .menu-toggle { display: block; } /* mostra hamburger */
+  .nav-toggle {
+    display: block; /* Mostra o botão hamburger */
+  }
 }
 
-/* Classe para mostrar menu mobile */
-.nav-mobile.show {
+/* Classe para mostrar o menu mobile */
+.mobile-menu.active {
   display: flex;
 }
-
-
 
 
