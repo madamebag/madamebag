@@ -29,20 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const navToggle = document.getElementById('navToggle');
-  const mobileMenu = document.getElementById('mobileMenu');
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
 
-  navToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-  });
-
-  // Opcional: fecha o menu ao clicar fora dele
-  document.addEventListener('click', (e) => {
-    if (!mobileMenu.contains(e.target) && !navToggle.contains(e.target)) {
-      mobileMenu.classList.remove('active');
-    }
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
   });
 });
+
 
 
 
