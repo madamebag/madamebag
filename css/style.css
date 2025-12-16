@@ -258,8 +258,7 @@ footer { background: var(--dark); color: var(--white); text-align:center; paddin
 
 }
 
-/* Por padrão, no desktop o hamburger fica escondido e o menu normal aparece */
-
+/* Hamburger - desktop escondido */
 .hamburger {
   display: none;
   font-size: 28px;
@@ -267,37 +266,35 @@ footer { background: var(--dark); color: var(--white); text-align:center; paddin
   color: var(--gold);
 }
 
-/* Nav direito fica visível no desktop */
+/* Desktop menu */
 .nav-right {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
 }
 
-/* Mobile: esconda o menu direito por padrão e exiba o hamburger */
+/* Mobile */
 @media(max-width: 768px) {
   .hamburger {
     display: block;
   }
 
   .nav-right {
-    display: none;  /* esconde menu quando começa a tela pequena */
+    display: none;  
     flex-direction: column;
     background: var(--dark);
     position: absolute;
-    top: 70px; /* ajuste conforme a altura do seu header/nav */
+    top: 70px; 
     right: 10px;
     border-radius: 10px;
     padding: 15px;
     width: 150px;
   }
 
-  /* Quando o menu estiver aberto, vai receber uma classe .active para mostrar */
   .nav-right.active {
     display: flex;
   }
 
-  /* Ajuste os botões no menu mobile */
   .nav-btn {
     padding: 10px 15px;
     border: none;
@@ -312,7 +309,6 @@ footer { background: var(--dark); color: var(--white); text-align:center; paddin
     color: var(--dark);
   }
 }
-
 
 
 
